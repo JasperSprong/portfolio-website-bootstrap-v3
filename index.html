@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasper Sprong</title>
+
+  <!-- Personal Styling Sheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/be023cf9b7.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts Link connections -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Workbench font -->
+  <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
+  <!-- Single day font -->
+  <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+  <!-- javascript links -->
+   <script src="burger.js"></script>
+</head>
+
+
+<header>
+  <img class="logo" src="Images/Main Logo.png" alt="Jasper_logo">
+
+    <ul class="nav">
+      <li class="navlink"><a href="index.html">Home</a></li>
+      <li class="navlink"><a href="Mijn_Projecten.html">Projects</a></li>
+      <li class="navlink"><a href="Images/Cv.jpg" download="Jasper-sprong-Cv.jpg">Download Mijn CV!</a></li>
+    </ul>
+
+    <div class="burger">
+      <span class="line1"></span>
+      <span class="line2"></span>
+      <span class="line3"></span>
+    </div>
+    
+</header>
+  
+  <script src="./main.js"></script>
+  <div class="page_content_wrapper">
+    <body id="MainBody">
+    <div class="jasper_Sprong">
+      <div class="profile_img_div">
+        <p class="jasper_text_styling">Jasper Sprong</p>
+        <img src="Images/Jasper_MB Shoots_DSC8214 digi - Copy.png" alt="jasperSprong" class="jasper_main_photo">
+        <div id="testtext">
+          <h1 id="KennisTxt">Ik heb kennis met <span id="text"></span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons_div_wrapper">
+        <a type="button" class="primary-btn" href="Mijn_Projecten.html">
+          <button class="nav-link">Mijn Projecten</button>
+        </a>
+    </div>
+
+    <div class="over_mij_content_wrapper">
+      <h1 class="title_over_mij">About Me</h1>
+      <p class="about_me_text">Hallo mijn naam is Jasper Sprong. Ik leef in Arnhem, en ik studeer op Technova College, van waar ik nu in de derde leerjaar zit van en vier jaar opleiding. Ik ben een gemotiveerde student, die graag in de cyber security wereld in wil duiken. In mijn vrij tijd game ik vaak, daar naast vind ik het ook leuk om te coderen zoals mijn eigen games makken in Unity of met Ubuntu aan de slag te gaan, als last vin ik het ook leuk om music te maken.</p>
+      <h1 class="ervaring_text_title">Programmer Ervaring/Skills</h1>
+      <div class="ervaring">
+        <img src="Images/skilss.jpg" alt="Japser's_skilss" class="jasper_skils">
+      </div>
+    </div>
+
+    <div id="ContactMEDiv">
+      <h2 class="ContactMetxt"> Contact Me!</h2>
+      <div class="fcf-body" id="fcf-body">
+        <div id="fcf-form">
+          <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">   
+            <div class="fcf-form-group">
+              <label for="Name" class="fcf-label">Your name</label>
+              <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+              </div>
+            </div>
+            <div class="fcf-form-group">
+              <label for="Email" class="fcf-label">Your email address</label>
+              <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+              </div>
+            </div>
+            <div class="fcf-form-group">
+              <label for="Message" class="fcf-label">Your message</label>
+              <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+              </div>
+            </div>
+            <div class="fcf-form-group">
+              <div>
+                If the message has not worked, try sending the message a second time.
+              </div>
+              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <footer id="MijnScocails">
+        <div class="personal_info">
+          Linked-In: <a href="https://www.linkedin.com/in/jasper-sprong-1b03a326a" id="LinkINlink">Jasper Sprong</a><br>
+          E-mail: Sprongjasper@gmail.com
+        </div>
+        <div id="About_Me_Text">
+          <div class="img_div_2">
+            <img src="Images/bootstrap.png" alt="Jasper_Bootstrap" class="BoostrapLogo">
+            <p class="website_bootstrap">Dit website is gemaakt met bootstrap</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</div>
+</html>

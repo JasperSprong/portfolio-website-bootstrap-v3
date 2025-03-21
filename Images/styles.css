@@ -1,0 +1,786 @@
+body, html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#MainBody{
+  width: auto;
+  background-color: rgb(20, 16, 16);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+/* Alle Titles */
+
+.title{
+  font-family: 'Single Day', cursive;
+  font-size:  6.5em;;
+  font-weight: 100;
+  margin-top: 72px;
+}
+
+
+/* Nav Bar */
+header{
+  margin-top: 2em;
+  width: 96%;
+  height: 70px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 3em;
+  background: #2b2a2a;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.logo {
+  width: 10%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.navlink {
+  list-style: none;
+  margin: 0;
+}
+
+.navlink a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Burger and Navigation for small screens */
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    right: -100%; /* Hidden by default */
+    top: 70px;
+    width: 50%;
+    height: 200px; /* Adjust height as needed */
+    flex-direction: column;
+    background-color: #000;
+    transition: right 0.5s ease-in-out;
+  }
+
+  .nav-active {
+    right: 0;
+  }
+
+  /* Nav link styling */
+  .navlink {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .navlink a {
+    font-size: 1.5em;
+  }
+
+  /* Transform the burger into a cross when active */
+  .nav-active ~ .burger .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-active ~ .burger .line2 {
+    opacity: 0; /* Hide the middle line */
+  }
+
+  .nav-active ~ .burger .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  /* Tablet layout */
+  .title {
+    font-size: 4.5em;
+  }
+
+  .jasper_text_styling {
+    font-size: 5em;
+  }
+
+  header {
+    height: 60px;
+    margin-top: 1em;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  .nav {
+    width: 40%;
+  }
+
+  .navlink a {
+    font-size: 1em;
+  }
+
+  .jasper_main_photo {
+    width: 60%;
+  }
+
+  .buttons_div_wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .primary-btn {
+    margin-left: 0;
+    width: 150px;
+  }
+
+  .over_mij_content_wrapper {
+    width: 85%;
+    margin-top: 20px;
+  }
+
+  .about_me_text {
+    width: 80%;
+    font-size: 1.3em;
+  }
+
+  .ervaring_text_title {
+    font-size: 3.5em;
+  }
+
+  .jasper_skils {
+    width: 85%;
+    margin-left: 0;
+  }
+
+  #ContactMEDiv {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .title-project {
+    font-size: 3.5em;
+  }
+
+  .mijn_projecten {
+    width: 70%;
+    margin-top: 5em;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile layout */
+  .title {
+    font-size: 3em;
+    margin-top: 40px;
+  }
+
+  header {
+    height: 60px;
+    margin-top: 0.5em;
+    width: 100%;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .jasper_text_styling {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .jasper_main_photo {
+    width: 80%;
+  }
+
+  .buttons_div_wrapper {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    display: grid !important;
+    align-content: center;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+
+  .over_mij_content_wrapper {
+    width: 90%;
+  }
+
+  .about_me_text {
+    width: 100%;
+    font-size: 1em;
+    text-align: justify;
+  }
+
+  .ervaring_text_title {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .jasper_skils {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  #ContactMEDiv {
+    margin-left: 1em !important;
+    margin-right: 1em;
+  }
+
+  .title-project {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .mijn_projecten {
+    width: 90%;
+    margin-top: 3em;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Small mobile screens */
+  .title {
+    font-size: 2.5em;
+  }
+
+  .jasper_text_styling {
+    font-size: 2.5em;
+  }
+
+  header {
+    height: 50px;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  .jasper_main_photo {
+    width: 90%;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+
+  .buttons_div_wrapper {
+    margin-top: 10px;
+  }
+
+  .about_me_text {
+    font-size: 0.9em;
+  }
+
+  .ervaring_text_title {
+    font-size: 2em !important;
+  }
+
+  .title-project {
+    font-size: 2em;
+  }
+
+  .mijn_projecten {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+
+
+/* landing Page */
+
+.page_content_wrapper{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.jasper_text_styling{
+  font-family: 'Single Day', cursive;
+  font-size:  7em;;
+  font-weight: 100;
+  margin-top: 72px;
+}
+
+.profile_img_div{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.jasper_main_photo{
+  align-content: center;
+  width: 40%;
+}
+
+.BoostrapLogo{
+  width: 2%;
+}
+
+.buttons_div_wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+/* over_mij */
+.over_mij_content_wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.title_over_mij{
+  font-family: 'Single Day', cursive;
+  font-size:  7em;;
+  font-weight: 100;
+  margin-top: 60px;
+}
+
+.about_me_text{
+  font-family: 'Single Day', cursive;
+  font-size:  1.5em;
+  font-weight: 50;
+  width: 70%;
+}
+
+.ervaring_text_title{
+  font-family: 'Single Day', cursive;
+  font-size:  4.5em;;
+  font-weight: 100;
+  margin-top: 60px;
+}
+
+.jasper_skils{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  margin-left: 145px;
+}
+
+
+
+.website_bootstrap{
+  margin-left: 34px;
+  margin-top: -23px;
+}
+
+
+
+/* Footer links */
+#LinkINlink:hover{
+  color: #858585;
+}
+
+#LinkINlink{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+@media screen and (max-width:1024px) and (max-height:2000px)
+{
+.ConH3{
+  color: red;
+  font-size: 30em;
+}
+
+}
+
+.Gif1{
+  margin-top: 4em;
+  margin-left: 21em;
+  margin-bottom: -5em;
+  width: 50em;
+  height: 30em;
+}
+.Pro2Img1{
+  margin-top: 24em;
+}
+.Pro2Img3{
+  width: 33em;
+  height: 20em;
+  margin-top: 3em;
+  margin-left: 30em;
+}
+
+.Pro2Img1,.Pro2Img2{
+  margin-left: 10em;
+  width: 30em;
+  height: 20em;
+}
+
+
+/*kennis tranformingtextest*/
+
+#text::before {
+  content: "WordPress";
+  animation: animate infinite 3s;
+  padding-left: 10px;}
+
+#testtext{
+  font-size: 1.6em;
+  margin-top: 1.5em;
+  margin-left: .7em;}
+
+@keyframes animate {
+  
+  0% {
+      content: "WordPress";}
+
+  50%{
+    content: "Javascript";
+  }
+
+  75% {
+      content: "PHP";}
+  
+}
+
+/*contact Form*/
+
+#ContactMEDiv{
+  margin-top: 10em;
+  margin-left: 10em;}
+
+.ContactMetxt{
+  display: block;}
+
+#fcf-form {
+  display:block;}
+
+.fcf-body {
+  margin: 0;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-align: left;
+  padding: 30px;
+  padding-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  max-width: 90%;}
+
+.fcf-form-group {
+  margin-bottom: 1rem;}
+
+.fcf-input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;}
+
+.fcf-form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+
+select.fcf-form-control[size], select.fcf-form-control[multiple] {
+  height: auto;}
+
+textarea.fcf-form-control {
+  font-family: -apple-system, Arial, sans-serif;
+  height: auto;}
+
+label.fcf-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;}
+
+.fcf-credit a:hover {
+  color: #0056b3;
+  text-decoration: underline;}
+
+.fcf-btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+
+@media (prefers-reduced-motion: reduce) {
+  .fcf-btn {
+      transition: none;}
+}
+
+.fcf-btn:hover {
+  color: #858585;
+  text-decoration: none;
+}
+
+.fcf-btn:focus, .fcf-btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.fcf-btn-primary {
+  color: #fff;
+
+}
+
+.fcf-btn-primary:focus, .fcf-btn-primary.focus {
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(13, 16, 20, 0.5);
+}
+
+.fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.fcf-btn-block {
+  display: block;
+  width: 100%;
+}
+
+.fcf-btn-block+.fcf-btn-block {
+  margin-top: 0.5rem;
+}
+
+input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
+  width: 100%;
+}
+
+
+.title-project{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.title-projecten{
+  font-family: 'Single Day', cursive;
+  font-size:  5em;;
+  font-weight: 100;
+  margin-top: 72px;
+  text-align: center;
+}
+.mijn_projecten{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  gap: 10px;
+  margin-top: 70em;
+  margin-bottom: 50px;
+}
+
+.title-project{
+  font-family: 'Single Day', cursive;
+  font-size:  4.2em;;
+  font-weight: 100;
+  margin-top: 72px;
+  text-align: center;
+}
+
+
+.buttons_div_wrapper {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically (if necessary) */
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.btn-link-projecten{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background: transparent;
+  color: whitesmoke;
+  margin-top: 10px;
+}
+
+.primary-btn{
+  width: 170px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin-left: 10px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: whitesmoke;
+  background-color: #3d3d3d76;
+}
+.primary-btn:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+.primary-btn::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+.primary-btn:hover {
+  box-shadow: 0 5px 15px rgb(255, 255, 255);
+}
+.primary-btn:hover:before {
+  border-color: #ffffff;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.primary-btn:hover:after {
+  border-color: #ffffff;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+/* Main Text Styling */
+
+.primary-text{
+  font-family: 'Single Day', cursive;
+  font-size:  2em;;
+  font-weight: 100;
+  margin-top: 72px;
+  text-align: center;
+}
+.primary-header{
+  font-family: 'Single Day', cursive;
+  font-size: 10em;
+  font-weight: 50;
+  text-align: center;
+}
+/* Main Content Wrapper */
+.main-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-top: 150em;
+}
+
+/* Main Body Socail Bird */
+.socail-bird{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.socail-bird-make-a-post-wrapper{
+  margin-bottom: 200px;
+  img{
+    height: 50%;
+    width: 70%;
+  }
+}
